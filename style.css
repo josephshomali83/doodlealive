@@ -52,3 +52,13 @@ a { color: inherit; }
 table { width: 100%; border-collapse: collapse; }
 td, th { text-align: left; padding: 6px 4px; border-bottom: 1px solid var(--line); }
 footer { text-align: center; color: var(--ink-soft); font-size: 14px; padding: 0 16px 32px; }
+
+.videos, .shots { display: grid; gap: 14px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 560px) { .videos, .shots { grid-template-columns: 1fr; } }
+figure { margin: 0; }
+video, .shots img {
+  width: 100%; display: block; border-radius: 16px; border: 2px solid var(--line);
+  aspect-ratio: 1180 / 820; object-fit: cover; background: #fff;
+}
+figcaption { font-size: 15px; color: var(--ink-soft); margin-top: 6px; text-align: center; }
+main { max-width: 900px; }
